@@ -1,1 +1,2 @@
-web: uvicorn backed:app --host 0.0.0.0 --port $PORT
+web: gunicorn -k eventlet -w 1 backed:app
+
